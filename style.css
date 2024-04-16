@@ -1,4 +1,124 @@
-form {
+/* Layout */
+.vbox {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+
+.hbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.w100pc {
+    width: 100%;
+}
+
+/* generals */
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    /* justify-content: stretch; */
+    font-size: 1.4em;
+}
+
+header {
+    background-color: #0175BB;
+    
+    padding: 30px;
+
+    color: white;
+    font-size: 1.6em;
+}
+
+main {
+    width: 100%;
+    gap: 20px;
+}
+
+form {
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+}
+
+#form-section {
+    justify-content: space-around;
+}
+
+
+/* component ------------ */
+.btn {
+    background-color: #569ABD;
+    padding: 15px 15px;
+
+    /* border: 2px solid black; */
+    /* border-radius: 10px; */
+
+    color: white;
+}
+
+.btn:hover {
+    -webkit-transition: background-color 0.2s ease-out;
+    -o-transition: background-color 0.2s ease-out;
+    transition: background-color 0.2s ease-out;
+    background-color: #407FA1;
+    cursor: pointer;
+}
+
+.search-area {
+    width: 400px;
+    padding: 15px 15px;
+}
+
+.display-range {
+    color: rgb(97, 97, 97);
+    font-size: 0.7em;
+    font-style: italic;
+}
+/* ------------------------- */
+
+/* filePicker ---------*/
+#filepicker {
+    display: none;
+}
+
+.file-icon {
+    gap: 10px;
+    vertical-align: middle;
+}
+
+.file-icon::after {
+    content: url(./assets/file-regular.svg);
+    width: 20px;
+}
+/* ---------------- */
+
+/* table */
+table {
+    table-layout: fixed;
+    width: 100%;
+    border: 3px solid black;
+    text-align: center;
+    vertical-align: middle;
+    border-collapse: collapse;
+}
+
+td {
+    border: 2px solid black;
+    padding: 8px;
+    font-size: 0.9em;
+}
+
+th {
+    padding: 12px;
+    background-color: #7B59A2;
+    color: white;
+    border: 3px solid black;
+}
+/* ---------------- */
