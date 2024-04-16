@@ -3,20 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>amIFar</title>
 </head>
 <body>
+    <header class="hbox w100pc">
+        <h1>DISTANCE ENTREPISE - APPRENANT</h1>
+    </header>
 
-    <h1>
-        coucou
-    </h1>
-    <form onsubmit="handleSubmit()">
-        <label for="filePicker">Choisissez un fichier</label>
-        <input id="filePicker" type="file" name="filePicker">
-        <input type="submit" value="inserer">
-    </form>
+    <main class="vbox w100pc">
+        <section id="form-section" class="hbox w100pc">
+
+            <form id="form-list-student" class="vbox">
+                <label class="hbox btn file-icon" for="filepicker">Selectionner une liste d'etudiant (excel) </label>
+                <input id="filepicker" accept=".xlsx" type="file" name="filepicker">
+            </form>
+
+            <form id="form-organization-address" class="vbox" action="">
+                <label for="address-input">Entrer l'adresse de l'entreprise</label>
+                <input id="address-input" class="search-area" type="text" placeholder="Adresse">
+            </form>
+
+        </section>
+
+        
+        <section id="table-section">
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Apprenant</th>
+                        <th scope="col">Temps trajet transport en commun</th>
+                        <th scope="col">Temps trajet velo</th>
+                        <th scope="col">Temps trajet vehicule</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Maeva Oukid</td>
+                        <td>2h</td>
+                        <td>1h44 <span class="display-range">(28 km)</span></td>
+                        <td>39min <span class="display-range">(33 km)</span></td>
+                    </tr>
+                    <tr>
+                        <td>Cyril Catoire</td>
+                        <td>1h54</td>
+                        <td>3h17 <span class="display-range">(56 km)</span></td>
+                        <td>55min <span class="display-range">(60 km)</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
 
 
     <script src="main.js"></script>
+
 </body>
 </html>
