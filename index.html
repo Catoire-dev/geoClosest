@@ -5,27 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>amIFar</title>
+    
 </head>
 <body>
     <header class="hbox w100pc">
         <h1>DISTANCE ENTREPISE - APPRENANT</h1>
     </header>
-
+    
     <main class="vbox w100pc">
         <section id="form-section" class="hbox w100pc">
-
+            
             <form id="form-list-student" class="vbox">
                 <label class="hbox btn file-icon" for="filepicker">Selectionner une liste d'etudiant (excel) </label>
                 <input id="filepicker" accept=".xlsx" type="file" name="filepicker">
             </form>
-
+            
             <form id="form-organization-address" class="vbox" action="">
                 <label for="address-input">Entrer l'adresse de l'entreprise</label>
                 <input id="address-input" class="search-area" type="text" placeholder="Adresse">
             </form>
-
+            
         </section>
-
+        
         
         <section id="table-section">
             <table>
@@ -54,9 +55,11 @@
             </table>
         </section>
     </main>
+    
+    
+    <script src="https://cdn.sheetjs.com/xlsx-0.20.2/package/dist/xlsx.full.min.js"></script>
+    <script src="main.js" type="module"></script>
 
-
-    <script src="main.js"></script>
-
+    
 </body>
 </html>
