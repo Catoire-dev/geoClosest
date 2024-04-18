@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/@webgeodatavore/photon-geocoder-autocomplete@2.0.1/dist/photon-geocoder-autocomplete.min.css" type="text/css">
     <title>amIFar</title>
 </head>
 <body>
     <header class="hbox w100pc">
         <h1>DISTANCE ENTREPISE - APPRENANT</h1>
     </header>
-
     <main class="vbox w100pc">
         <section id="form-section" class="hbox w100pc">
 
@@ -21,7 +21,12 @@
 
             <form id="form-organization-address" class="vbox" action="">
                 <label for="address-input">Entrer l'adresse de l'entreprise</label>
-                <input id="address-input" class="search-area" type="text" placeholder="Adresse">
+                <input id="address-input" class="search-area" type="text" placeholder="Adresse" autocomplete="off">
+                <ul id="search-list" class="vbox hide">
+
+
+                    
+                </ul>
             </form>
 
         </section>
@@ -56,7 +61,8 @@
     </main>
 
 
-    <script src="main.js"></script>
+    <!-- <script src="main.js" type="module"></script>-->
+    <script src="selectAddress.js" type="module"></script>
 
 </body>
 </html>

@@ -42,6 +42,7 @@ main {
 }
 
 form {
+    position: relative;
     flex-direction: column;
     gap: 10px;
     padding: 20px;
@@ -122,3 +123,36 @@ th {
     border: 3px solid black;
 }
 /* ---------------- */
+
+
+#search-list {
+    background-color: rgb(191, 191, 191);
+
+    position: absolute;
+    bottom: -150px;
+
+    border: 1px solid black;
+    width: calc(100% - 2px);
+    
+    margin: 0;
+    padding: 0;
+
+    align-items: baseline;
+    align-self: baseline;
+}
+
+#search-list li {
+    width: calc(100% - 10px);
+
+    list-style: none;
+    padding: 3px 0 3px 10px;
+    border-bottom: 1px solid #7B59A2;
+}
+#search-list li:hover {
+    background-color: rgb(231, 231, 231);
+    cursor: pointer;
+}
+
+#search-list li:last-child {
+    border: none;
+}
