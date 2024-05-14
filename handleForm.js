@@ -1,7 +1,6 @@
-export const dataStudent = localStorage.getItem("dataStudent");
-const file = document.getElementById("filepicker");
+import { updateTableView } from "./main.js";
 
-file.addEventListener("change", (event) => {
+export const eventFileChange = (event) => {
   var reader = new FileReader();
   reader.readAsArrayBuffer(event.target.files[0]);
   reader.onload = function (event) {
@@ -14,7 +13,7 @@ file.addEventListener("change", (event) => {
     var slicedSheetData = sheet_data.slice(1);
     formatSheet(slicedSheetData);
   };
-});
+};
 
 function formatSheet(sheet_data) {
   var nomColumn = 0;
@@ -32,11 +31,6 @@ function formatSheet(sheet_data) {
   }));
 
   var dataStringify = JSON.stringify(filteredData);
-
-  var concatenatedAdress = sheet_data.map(
-    (row) =>
-      row[adresseColumn] + " " + row[codePostalColumn] + " " + row[villeColumn]
-  );
-
   localStorage.setItem("dataStudent", dataStringify);
+  updateTableView();
 }

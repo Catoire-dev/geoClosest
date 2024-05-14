@@ -1,6 +1,5 @@
 import {fetchAddress} from './api.js';
 
-
 const selectAddress = document.querySelector('#address-input');
 const addressList = document.querySelector('#search-list');
 
